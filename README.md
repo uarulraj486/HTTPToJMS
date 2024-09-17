@@ -18,6 +18,7 @@
     admin--<apiname>_v1.0.xml
     E.g., admin--abctest_v1.0.xml
    Update the handler configration as follows
+   Add this handler as the first handler under the handlers node
    <handlers>
         <handler class="<<customhandler class name with the package>>"/>
    </handlers>
@@ -25,7 +26,7 @@
         <handler class="<<org.wso2.custom.APILoggingHandler>>"/>
    </handlers>
 Note: Engage the handler in velocity_template.xml is the best practice
-5. Paste the MessageHandlerHTTPToJMS.jar (from step 2) into the <APIM_HOME>/repository/components/lib/ folder.
+6. Paste the MessageHandlerHTTPToJMS.jar (from step 2) into the <APIM_HOME>/repository/components/lib/ folder.
 
 **ActiveMQ**
 6. Download Apache ActiveMQ 5.8.0.
