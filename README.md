@@ -2,9 +2,11 @@
 1. Update the custom-handler.properties file according to your needs.
 
 2. Compile and build the package MessageHandlerHTTPToJMS.jar from the Java project MessageHandlerHTTPToJMS
+
    Copy the MessageHandlerHTTPToJMS.jar from the target folder.
 
 **API Manager 3.2.0**
+
 3. Create two sequences in the following location:
 <APIM_HOME>/repository/deployment/server/synapse-configs/default/sequences/
 
@@ -17,7 +19,9 @@
     For example:
     admin--<apiname>_v1.0.xml
     E.g., admin--abctest_v1.0.xml
-   Update the handler configration as follows
+   
+5. Update the handler configration as follows
+   
    Add this handler as the first handler under the handlers node
    ```<handlers>
         <handler class="<<customhandler class name with the package>>"/>
@@ -29,11 +33,13 @@
    </handlers>
    ```
 Note: Engage the handler in velocity_template.xml is the best practice
+
 6. Paste the MessageHandlerHTTPToJMS.jar (from step 2) into the <APIM_HOME>/repository/components/lib/ folder.
 
 **ActiveMQ**
-6. Download Apache ActiveMQ 5.8.0.
-7. Copy the following client libraries from the ACTIVEMQ_HOME/lib directory to the APIM_HOME/lib directory:
+
+7. Download Apache ActiveMQ 5.8.0.
+8. Copy the following client libraries from the ACTIVEMQ_HOME/lib directory to the APIM_HOME/lib directory:
 
     activemq-broker-5.8.0.jar
     activemq-client-5.8.0.jar
@@ -51,7 +57,7 @@ For Earlier Versions of ActiveMQ:
     geronimo-j2ee-management_1.0_spec-1.0.jar
     geronimo-jms_1.1_spec-1.1.1.jar
 
-8. Update the deployment.toml file located in <APIM_HOME>/repository/conf/ with the following configuration:
+9. Update the deployment.toml file located in <APIM_HOME>/repository/conf/ with the following configuration:
 
    ActiveMQ Configuration
     [transport.jms]
@@ -69,32 +75,33 @@ For Earlier Versions of ActiveMQ:
     Login: admin
     Password: admin
 
-9. Start the ActiveMQ server:
+10. Start the ActiveMQ server:
+   
         Mac (using Homebrew): brew services start activemq
         Manual (from the extracted ActiveMQ folder):
         Navigate to the bin folder and run:
         sh activemq.sh start
 
-10. Open the administrative interface:
+11. Open the administrative interface
         URL: http://127.0.0.1:8161/admin/
         Login: admin
         Password: admin
 
-11. Navigate to Queues and create two queues:
+12. Navigate to Queues and create two queues:
         requestqueue
         responsequeue
 
         These queues will be created and displayed under the Queues tab.
 
-12. Update the requestqueue and responsequeue names in the _api_logging_request_handler_.xml and _api_logging_response_handler_.xml files, where the JMS endpoints are defined.
+13. Update the requestqueue and responsequeue names in the _api_logging_request_handler_.xml and _api_logging_response_handler_.xml files, where the JMS endpoints are defined.
 
 **Mockoon API**
 
-13. Connect with Mockoon to create your resource methods (GET and POST). Add the logic and get the URLs of the endpoints.
+14. Connect with Mockoon to create your resource methods (GET and POST). Add the logic and get the URLs of the endpoints.
 
 **API Manager Configuration**
 
-14. Please refer to the point 3, point 4, point 5, point 7, and point 8
+15. Please refer to the point 3, point 4, point 5, point 7, and point 8
     Restart the API Manager.
 
     Create APIs in the API Manager using the Publisher, add resource methods, and define API endpoints. Then, publish the API.
