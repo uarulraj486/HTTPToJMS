@@ -97,14 +97,14 @@ For Earlier Versions of ActiveMQ:
 
 **Mockoon API**
 
-14. Connect with Mockoon to create your resource methods (GET and POST). Add the logic and get the URLs of the endpoints.
+14. Connect with Mockoon to create your own api endpoint with resource methods (GET and POST). Add the logic and get the URLs of the endpoints.
 
 **API Manager Configuration**
 
 15. Please refer to the point 3, point 4, point 5, point6, and point 8
     Restart the API Manager.
 
-    Create APIs in the API Manager using the Publisher, add resource methods, and define API endpoints. Then, publish the API.
+    Create APIs in the API Manager using the Publisher, add resource methods, and define API endpoints point 14. Then, publish the API.
 
     Create an application in the Developer Portal and subscribe to the API.
 
