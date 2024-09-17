@@ -87,9 +87,11 @@ For Earlier Versions of ActiveMQ:
 12. Update the requestqueue and responsequeue names in the _api_logging_request_handler_.xml and _api_logging_response_handler_.xml files, where the JMS endpoints are defined.
 
 **Mockoon API**
+
 13. Connect with Mockoon to create your resource methods (GET and POST). Add the logic and get the URLs of the endpoints.
 
 **API Manager Configuration**
+
 14. Please refer to the point 3, point 4, point 5, point 7, and point 8
     Restart the API Manager.
 
