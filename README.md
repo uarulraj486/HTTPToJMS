@@ -1,7 +1,7 @@
 **Java Project**
 1. Update the custom-handler.properties file according to your needs.
 
-2. Compile and build the package MessageHandlerHTTPToJMS.jar from the Java project MessageHandlerHTTPToJMS using IntelliJ
+2. Compile and build the package MessageHandlerHTTPToJMS.jar from the Java project MessageHandlerHTTPToJMS
    Copy the MessageHandlerHTTPToJMS.jar from the target folder.
 
 **API Manager 3.2.0**
