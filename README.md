@@ -19,12 +19,15 @@
     E.g., admin--abctest_v1.0.xml
    Update the handler configration as follows
    Add this handler as the first handler under the handlers node
-   <handlers>
+   ```<handlers>
         <handler class="<<customhandler class name with the package>>"/>
    </handlers>
-        eg., : <handlers>
-        <handler class="<<org.wso2.custom.APILoggingHandler>>"/>
+   ```
+   example:
+   ```<handlers>
+        <handler class="org.wso2.custom.APILoggingHandler"/>
    </handlers>
+   ```
 Note: Engage the handler in velocity_template.xml is the best practice
 6. Paste the MessageHandlerHTTPToJMS.jar (from step 2) into the <APIM_HOME>/repository/components/lib/ folder.
 
