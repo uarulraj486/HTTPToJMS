@@ -101,7 +101,7 @@ For Earlier Versions of ActiveMQ:
 
 **API Manager Configuration**
 
-15. Please refer to the point 3, point 4, point 5, point 7, and point 8
+15. Please refer to the point 3, point 4, point 5, point6, and point 8
     Restart the API Manager.
 
     Create APIs in the API Manager using the Publisher, add resource methods, and define API endpoints. Then, publish the API.
