@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><sequence xmlns="http://ws.apache.org/ns/synapse" name="_api_logging_request_handler_">
+    <log level="custom">
+        <property name="_api_logging_request_handler_" value="Inside the _api_logging_request_handler_"/>
+    </log>
+    <property name="OUT_ONLY" value="true"/>
+    <clone continueParent="true">
+        <target>
+            <endpoint>
+                <address uri="jms:/requestqueue?transport.jms.ConnectionFactory=myQueueSender"/>
+            </endpoint>
+        </target>
+    </clone>
+    <property name="OUT_ONLY" value="false"/>
+    <log level="custom">
+        <property name="_api_logging_request_handler_" value="After the Clone mediator...."/>
+    </log>
+</sequence>
