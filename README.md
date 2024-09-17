@@ -49,11 +49,9 @@ For Earlier Versions of ActiveMQ:
 
 8. Update the deployment.toml file located in <APIM_HOME>/repository/conf/ with the following configuration:
 
-   # ActiveMQ Configuration
+   ActiveMQ Configuration
     [transport.jms]
     sender_enable = true
-    # listener_enable = true
-
     [[transport.jms.sender]]
     name = "myQueueSender"
     parameter.'java.naming.factory.initial' = "org.apache.activemq.jndi.ActiveMQInitialContextFactory"
